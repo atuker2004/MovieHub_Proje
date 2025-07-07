@@ -1,0 +1,100 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background-color: var(--darker-bg);
+  border-right: 2px solid var(--border-color);
+  transition: transform 0.3s ease;
+  z-index: 50;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: all 0.3s;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-item:hover {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+.sidebar-item.active {
+  background-color: var(--primary-orange);
+  color: white;
+  border-right: 4px solid var(--secondary-orange);
+}
+
+.sidebar-icon {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  width: 24px;
+  text-align: center;
+}
+
+.sidebar-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.user-permissions h4 {
+  color: var(--primary-orange);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.permissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.permission-badge {
+  background-color: var(--primary-orange);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
