@@ -43,3 +43,8 @@ CSS3 (Custom styling)
 **Amaç
 
 Bu proje staj projesi olarak geliştirilmiştir.
+
+**Kullanıcı Adları
+(admin) passwpord:admin123
+(movieuser) password:movie123
+(actoruser) password:actor123
